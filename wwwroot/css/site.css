@@ -1,0 +1,36 @@
+html {
+  font-size: 20px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.2em !important;
+  color: #333;
+  background-color: #fff;
+
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  #img-logo {
+    margin-left: 20px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#img-logo {
+  /* position: absolute; */
+  height: 50px; 
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px auto #ccc;
+  box-shadow: 0 0 10px #ccc;
+}
