@@ -16,7 +16,7 @@ namespace PortFolio.Services
         // This is required if using a Cognitive Services resource.
         private static readonly string location = "eastus2";
 
-        public async Task<string> Translate(string textToTranslate)
+        public async Task<string> Translate(string textToTranslate) 
         {
             // Input and output languages are defined as parameters.
             string route = "/translate?api-version=3.0&from=es&to=en&to=ru";

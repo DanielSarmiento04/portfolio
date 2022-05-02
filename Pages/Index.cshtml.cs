@@ -11,7 +11,7 @@ namespace PortFolio.Pages;
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
-    private  MicrosoftTranslator _translator;
+    private MicrosoftTranslator _translator;
     [BindProperty]
     public string TextIndex { get; set; }
 
@@ -23,9 +23,9 @@ public class IndexModel : PageModel
 
     public async Task OnGetAsync()
     {
-        TextIndex = await  _translator.Translate("Hola");
+        TextIndex = await _translator.Translate("            Programador, ingeniero mecánico y emprendedor, mi objetivo es mejorar la calidad de vida de las personas, la tecnología es la herramienta que utilizo. Tengo experiencia en el desarrollo de aplicaciones web y de escritorio y en el análisis de datos.");
     }
-    public void  OnPost()
+    public void OnPost()
     {
 
     }
