@@ -2,6 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Inicio";
+    var text = Model.TextIndex;
 }
 
 <div class="container-index">
@@ -11,10 +12,11 @@
             Programador, ingeniero mecánico y emprendedor, mi objetivo es mejorar la calidad de vida de las personas, la tecnología es la herramienta que utilizo. Tengo experiencia en el desarrollo de aplicaciones web y de escritorio y en el análisis de datos.
         </p>
     </div>
-
-
-
     <div class="container-perfil-image">
         <img src="~/src/images/Perfil.jpg" id ="perfil"alt="">
     </div>
+</div>
+
+<div class="textChange">
+    <h1>@text</h1>
 </div>

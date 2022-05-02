@@ -4,22 +4,26 @@ using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json; // Install Newtonsoft.Json with NuGet
+using PortFolio.Services;
 
 namespace PortFolio.Pages;
 
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
+    private  MicrosoftTranslator _translator;
+    [BindProperty]
+    public string TextIndex { get; set; }
 
     public IndexModel(ILogger<IndexModel> logger)
     {
         _logger = logger;
+        _translator = new MicrosoftTranslator();
     }
 
-    public void OnGet()
+    public async Task OnGetAsync()
     {
-
+        TextIndex = await  _translator.Translate("Hola");
     }
     public void  OnPost()
     {
